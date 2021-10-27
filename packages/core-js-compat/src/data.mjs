@@ -1710,6 +1710,7 @@ export const data = {
   // TODO: Remove from `core-js@4`
   'esnext.symbol.replace-all': {
   },
+  // TODO: Remove from `core-js@4`
   'esnext.typed-array.from-async': {
   },
   // TODO: Remove from `core-js@4`
@@ -1727,6 +1728,7 @@ export const data = {
     chrome: '97',
     safari: '15.4',
   },
+  // TODO: Remove from `core-js@4`
   'esnext.typed-array.group-by': {
   },
   'esnext.typed-array.unique-by': {
