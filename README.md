@@ -121,6 +121,7 @@ Promise.resolve(32).then(x => console.log(x)); // => 32
       - [`String.prototype.codePoints`](#stringprototypecodepoints)
       - [`Symbol.matcher` for pattern matching](#symbolmatcher-for-pattern-matching)
     - [Stage 0 proposals](#stage-0-proposals)
+      - [`Function.{ isCallable, isConstructor }`](#function-iscallable-isconstructor)
       - [`URL`](#url)
     - [Pre-stage 0 proposals](#pre-stage-0-proposals)
       - [`Reflect` metadata](#reflect-metadata)
@@ -2606,6 +2607,35 @@ Promise.try(() => { throw 42; }).catch(it => console.log(`Promise, rejected as $
 [*CommonJS entry points:*](#commonjs-api)
 ```js
 core-js(-pure)/stage/0
+```
+##### [`Function.{ isCallable, isConstructor }`](https://github.com/caitp/TC39-Proposals/blob/trunk/tc39-reflect-isconstructor-iscallable.md)[⬆](#index)
+
+Modules [`esnext.function.is-callable`](https://github.com/zloirock/core-js/blob/master/packages/core-js/modules/esnext.function.is-callable.js), [`esnext.function.is-constructor`](https://github.com/zloirock/core-js/blob/master/packages/core-js/modules/esnext.function.is-constructor.js)
+```js
+class Function {
+  static isCallable(value: any): boolean;
+  static isConstructor(value: any): boolean;
+}
+```
+[*CommonJS entry points:*](#commonjs-api)
+```js
+core-js/proposals/function-is-callable-is-constructor
+core-js(-pure)/features/function/is-callable
+core-js(-pure)/features/function/is-constructor
+```
+[*Examples*](t.ly/ai3f):
+```js
+Function.isCallable(null);           // => false
+Function.isCallable({});             // => false
+Function.isCallable(function () {}); // => true
+Function.isCallable(() => {});       // => true
+Function.isCallable(class {});       // => false
+
+Function.isConstructor(null);           // => false
+Function.isConstructor({});             // => false
+Function.isConstructor(function () {}); // => true
+Function.isConstructor(() => {});       // => false
+Function.isConstructor(class {});       // => true
 ```
 ##### [`URL`](https://github.com/jasnell/proposal-url)[⬆](#index)
 See more info [in web standards namespace](#url-and-urlsearchparams)

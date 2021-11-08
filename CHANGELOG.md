@@ -1,5 +1,8 @@
 ## Changelog
 ##### Unreleased
+- Added [`Function.{ isCallable, isConstructor }` stage 0 proposal](https://github.com/caitp/TC39-Proposals/blob/trunk/tc39-reflect-isconstructor-iscallable.md):
+  - `Function.isCallable`
+  - `Function.isConstructor`
 - Added handling of comments and specific spaces to `Function#name` polyfill, [#1010](https://github.com/zloirock/core-js/issues/1010), thanks [@ildar-shaimordanov](https://github.com/ildar-shaimordanov)
 - Updated Deno compat data mapping
 - Added iOS Safari 15.2 compat data mapping
