@@ -1,5 +1,6 @@
 ## Changelog
 ##### Unreleased
+- Added `Number.prototype.toExponential` method polyfill with many different fixes for the most engines
 - Added handling of comments and specific spaces to `Function#name` polyfill, [#1010](https://github.com/zloirock/core-js/issues/1010), thanks [@ildar-shaimordanov](https://github.com/ildar-shaimordanov)
 - Updated Deno compat data mapping
 - Added iOS Safari 15.2 compat data mapping
