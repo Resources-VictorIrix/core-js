@@ -1,5 +1,14 @@
 ## Changelog
 ##### Unreleased
+- Added [change `Array` by copy stage 2 proposal](https://github.com/tc39/proposal-change-array-by-copy):
+  - `Array.prototype.toReversed`
+  - `Array.prototype.toSorted`
+  - `Array.prototype.toSpliced`
+  - `Array.prototype.with`
+  - `%TypedArray%.prototype.toReversed`
+  - `%TypedArray%.prototype.toSorted`
+  - `%TypedArray%.prototype.toSpliced`
+  - `%TypedArray%.prototype.with`
 - Added handling of comments and specific spaces to `Function#name` polyfill, [#1010](https://github.com/zloirock/core-js/issues/1010), thanks [@ildar-shaimordanov](https://github.com/ildar-shaimordanov)
 - Updated Deno compat data mapping
 - Added iOS Safari 15.2 compat data mapping
