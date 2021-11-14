@@ -1,7 +1,9 @@
 import { DESCRIPTORS } from '../helpers/constants';
 import { createIterable } from '../helpers/helpers';
 
-import { Symbol, URL, URLSearchParams } from 'core-js-pure';
+import Symbol from 'core-js-pure/es/symbol';
+import URL from 'core-js-pure/stable/url';
+import URLSearchParams from 'core-js-pure/stable/url-search-params';
 
 QUnit.test('URLSearchParams', assert => {
   assert.isFunction(URLSearchParams);
