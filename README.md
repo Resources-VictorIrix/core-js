@@ -823,7 +823,7 @@ core-js(-pure)/es|stable|actual|features/string(/virtual)/bold
 core-js(-pure)/es|stable|actual|features/string(/virtual)/fixed
 core-js(-pure)/es|stable|actual|features/string(/virtual)/fontcolor
 core-js(-pure)/es|stable|actual|features/string(/virtual)/fontsize
-core-js(-pure)/es|stable|actual|features/string(/virtual)(/virtual)/italics
+core-js(-pure)/es|stable|actual|features/string(/virtual)/italics
 core-js(-pure)/es|stable|actual|features/string(/virtual)/link
 core-js(-pure)/es|stable|actual|features/string(/virtual)/small
 core-js(-pure)/es|stable|actual|features/string(/virtual)/strike
@@ -2819,10 +2819,6 @@ Reflect.getOwnMetadata('foo', object); // => 'bar'
 ```
 
 ### Web standards[⬆](#index)
-[*CommonJS entry points:*](#commonjs-api)
-```js
-core-js(-pure)/web
-```
 #### `setTimeout` and `setInterval`[⬆](#index)
 Module [`web.timers`](https://github.com/zloirock/core-js/blob/master/packages/core-js/modules/web.timers.js). Additional arguments fix for IE9-.
 ```js
@@ -2831,7 +2827,6 @@ function setInterval(callback: any, time: any, ...args: Array<mixed>): number;
 ```
 [*CommonJS entry points:*](#commonjs-api)
 ```js
-core-js(-pure)/web/timers
 core-js(-pure)/stable|actual|features/set-timeout
 core-js(-pure)/stable|actual|features/set-interval
 ```
@@ -2849,7 +2844,6 @@ function clearImmediate(id: number): void;
 ```
 [*CommonJS entry points:*](#commonjs-api)
 ```js
-core-js(-pure)/web/immediate
 core-js(-pure)/stable|actual|features/set-immediate
 core-js(-pure)/stable|actual|features/clear-immediate
 ```
@@ -2871,7 +2865,6 @@ function queueMicrotask(fn: Function): void;
 ```
 [*CommonJS entry points:*](#commonjs-api)
 ```js
-core-js/web/queue-microtask
 core-js(-pure)/stable|actual|features/queue-microtask
 ```
 [*Examples*](https://goo.gl/nsW8P9):
@@ -2920,8 +2913,6 @@ class URLSearchParams {
 [*CommonJS entry points:*](#commonjs-api)
 ```js
 core-js/proposals/url
-core-js(-pure)/web/url
-core-js(-pure)/web/url-search-params
 core-js(-pure)/stable|actual|features/url
 core-js/stable|actual|features/url/to-json
 core-js(-pure)/stable|actual|features/url-search-params
@@ -3021,7 +3012,6 @@ class [DOMTokenList, NodeList] {
 ```
 [*CommonJS entry points:*](#commonjs-api)
 ```js
-core-js(-pure)/web/dom-collections
 core-js(-pure)/stable|actual|features/dom-collections/iterator
 core-js/stable|actual|features/dom-collections/for-each
 ```
