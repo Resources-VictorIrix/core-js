@@ -1147,6 +1147,8 @@ const forbidNonStandardBuiltIns = {
   'es/no-nonstandard-array-prototype-properties': ERROR,
   'es/no-nonstandard-arraybuffer-properties': ERROR,
   'es/no-nonstandard-arraybuffer-prototype-properties': ERROR,
+  'es/no-nonstandard-asyncdisposablestack-properties': ERROR,
+  'es/no-nonstandard-asyncdisposablestack-prototype-properties': ERROR,
   'es/no-nonstandard-atomics-properties': ERROR,
   'es/no-nonstandard-bigint-properties': ERROR,
   'es/no-nonstandard-bigint-prototype-properties': ERROR,
@@ -1156,6 +1158,9 @@ const forbidNonStandardBuiltIns = {
   'es/no-nonstandard-dataview-prototype-properties': ERROR,
   'es/no-nonstandard-date-properties': ERROR,
   'es/no-nonstandard-date-prototype-properties': ERROR,
+  'es/no-nonstandard-disposablestack-properties': ERROR,
+  'es/no-nonstandard-disposablestack-prototype-properties': ERROR,
+  'es/no-nonstandard-error-properties': ERROR,
   'es/no-nonstandard-finalizationregistry-properties': ERROR,
   'es/no-nonstandard-finalizationregistry-prototype-properties': ERROR,
   'es/no-nonstandard-function-properties': ERROR,
@@ -1217,7 +1222,6 @@ const forbidCompletelyNonExistentBuiltIns = {
   ...forbidNonStandardBuiltIns,
   // disallow non-standard built-in methods
   'es/no-nonstandard-array-properties': [ERROR, { allow: [
-    'fromAsync',
     'isTemplateObject',
   ] }],
   'es/no-nonstandard-array-prototype-properties': [ERROR, { allow: [
@@ -1357,9 +1361,7 @@ const forbidCompletelyNonExistentBuiltIns = {
     'codePoints',
   ] }],
   'es/no-nonstandard-symbol-properties': [ERROR, { allow: [
-    'asyncDispose',
     'customMatcher',
-    'dispose',
     'isRegisteredSymbol',
     'isWellKnownSymbol',
     'metadata',
@@ -1658,6 +1660,13 @@ const forbidES2025BuiltIns = {
   'es/no-set-prototype-union': ERROR,
 };
 
+const forbidES2026BuiltIns = {
+  'es/no-array-fromasync': ERROR,
+  'es/no-asyncdisposablestack': ERROR,
+  'es/no-error-iserror': ERROR,
+  'es/no-suppressederror': ERROR,
+};
+
 const forbidES2016IntlBuiltIns = {
   'es/no-intl-getcanonicallocales': ERROR,
 };
@@ -1720,6 +1729,7 @@ const forbidModernBuiltIns = {
   ...forbidES2023BuiltIns,
   ...forbidES2024BuiltIns,
   ...forbidES2025BuiltIns,
+  ...forbidES2026BuiltIns,
   ...forbidES2016IntlBuiltIns,
   ...forbidES2017IntlBuiltIns,
   ...forbidES2018IntlBuiltIns,
@@ -1820,6 +1830,7 @@ const nodePackages = {
   ...forbidES2023BuiltIns,
   ...forbidES2024BuiltIns,
   ...forbidES2025BuiltIns,
+  ...forbidES2026BuiltIns,
   ...disable(forbidES2016IntlBuiltIns),
   ...disable(forbidES2017IntlBuiltIns),
   ...forbidES2018IntlBuiltIns,
@@ -1839,6 +1850,7 @@ const nodeDev = {
   'es/no-array-prototype-findlast-findlastindex': OFF,
   ...forbidES2024BuiltIns,
   ...forbidES2025BuiltIns,
+  ...forbidES2026BuiltIns,
   'es/no-intl-supportedvaluesof': ERROR,
   ...forbidES2023IntlBuiltIns,
   ...forbidES2025IntlBuiltIns,
@@ -2131,11 +2143,7 @@ const markdown = {
 };
 
 const globalsESNext = {
-  AsyncDisposableStack: READONLY,
   AsyncIterator: READONLY,
-  DisposableStack: READONLY,
-  Observable: READONLY,
-  SuppressedError: READONLY,
   compositeKey: READONLY,
   compositeSymbol: READONLY,
 };

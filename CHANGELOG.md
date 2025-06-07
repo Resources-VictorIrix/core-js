@@ -67,15 +67,17 @@
 - Fixed deoptimization of the `Promise` polyfill in the pure version
 - Added some missed dependencies to `/iterator/flat-map` entries
 - Compat data improvements:
-  - [`Error.isError`](https://github.com/tc39/proposal-is-error) marked not supported in Node because of [a bug](https://github.com/nodejs/node/issues/56497)
   - Added [Deno 2.3](https://github.com/denoland/deno/releases/tag/v2.3.0) and [Deno 2.3.2](https://github.com/denoland/deno/releases/tag/v2.3.2) compat data mapping
   - Updated Electron 37 compat data mapping
+  - Added Opera Android 90 compat data mapping
+  - [`Error.isError`](https://github.com/tc39/proposal-is-error) marked not supported in Node because of [a bug](https://github.com/nodejs/node/issues/56497)
   - `Set.prototype.difference` marked as not supported in Safari and supported only from Bun 1.2.5 because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=288595)
   - `Set.prototype.{ symmetricDifference, union }` marked as not supported in Safari and supported only from Bun 1.2.5 because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=289430)
   - `Iterator.from` marked as not supported in Safari and supported only from Bun 1.2.5 because of [a bug](https://bugs.webkit.org/show_bug.cgi?id=288714)
   - Iterators closing on early errors in `Iterator` helpers marked as implemented from FF141
   - `Array.prototype.with` marked as supported only from FF140 because it throws an incorrect exception when index coercion fails
   - `TypedArray.prototype.with` marked as unsupported in Bun and Safari because it should truncate negative fractional index to zero, but instead throws an error
+  - `DisposableStack` and `AsyncDisposableStack` marked as [shipped in FF141](https://bugzilla.mozilla.org/show_bug.cgi?id=1967744) (`SuppressedError` has [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1971000))
   - `AsyncDisposableStack` bugs marked as fixed in Deno 2.3.2
   - `SuppressedError` bugs ([extra arguments support](https://github.com/oven-sh/bun/issues/9283) and [arity](https://github.com/oven-sh/bun/issues/9282)) marked as fixed in Bun 1.2.15
 
